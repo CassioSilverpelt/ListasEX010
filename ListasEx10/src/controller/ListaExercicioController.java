@@ -9,6 +9,8 @@ public class ListaExercicioController {
 	
 	Lista<Integer> lista = new Lista<>();
 	
+	Lista<Integer> listadois = new Lista<>();
+	
 	public void listaAdd (int[] vetor) {
 		int tamanho = vetor.length;
 		for (int i = 0; i < tamanho; i++) {
@@ -49,6 +51,34 @@ public class ListaExercicioController {
 				lista.removeFirst();
 			}
 		}
+	}
+	
+	private void popularlista2() {
+		listadois.addFirst(3);
+		listadois.addLast(5);
+		listadois.addLast(8);
+		listadois.addLast(12);
+		listadois.addLast(9);
+		listadois.addLast(7);
+		listadois.addLast(6);
+		listadois.addLast(2);
+		listadois.addLast(3);
+		listadois.addLast(7);
+		listadois.addLast(16);
+	}
+	
+	public void doismaiores() throws Exception {
+		popularlista2();
+		int tamanho = listadois.size();
+		int maior = 0;
+		int segmaior = maior;
+		for (int i = 0; i < tamanho; i++) {
+			if (listadois.get(i) > maior) {
+				segmaior = maior;
+				maior = listadois.get(i);
+			}
+		}
+		System.out.println(maior +" "+ segmaior);
 	}
 	
 	

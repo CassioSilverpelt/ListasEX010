@@ -1,5 +1,4 @@
 package view;
-
 import controller.ListaExercicioController;
 
 public class ListaExercicioPrincipal {
@@ -16,6 +15,17 @@ public class ListaExercicioPrincipal {
 			System.err.println(e.getMessage());
 		}
 			
+		
+		//*****************************************
+		try {
+			System.out.println();
+			listCon.doismaiores();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+		
+		
+		
 	}
 
 }
